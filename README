@@ -47,3 +47,21 @@ Filters
 - ExampleFilter.scala
 
   A simple filter that adds a header to every response.
+
+
+
+  Things to Do
+  ============
+  install.sh
+  Grant access/permissions to read from Git on the DigitalOcean droplet.
+  Clone the repo to local directory
+  Install Scala and SBT
+  Download dependencies
+
+  start.sh
+  Compile
+  Run
+
+  tests for calling the api from the gif service
+  tests for calling the gif service from controller
+  integration test for returning 5 or 0 gifs (two tests)
