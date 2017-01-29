@@ -1,67 +1,12 @@
-This is your new Play application
-=================================
+This is a wrapper service for calling the GiphyService API
+==========================================================
 
-This file will be packaged with your application when using `activator dist`.
+To install dependencies for this service, run "sh install.sh"
+It will install packages and this part requires user input to grant permissions to install/update/overwrite packages
 
-There are several demonstration files available in this template.
+To run the service, run "sh start.sh"
+This will start the application on port 8080.
+If running the service on a VM with limited memory, you may see an SBT error that looks like `/root/spark/build/sbt-launch-lib.bash: line 72: 2404 Killed "$@"`
+This most likely means there was a memory leak in the VM.
+Restarting the VM will allow you to run the start script.
 
-Controllers
-===========
-
-- HomeController.scala:
-
-  Shows how to handle simple HTTP requests.
-
-- AsyncController.scala:
-
-  Shows how to do asynchronous programming when handling a request.
-
-- CountController.scala:
-
-  Shows how to inject a component into a controller and use the component when
-  handling requests.
-
-Components
-==========
-
-- Module.scala:
-
-  Shows how to use Guice to bind all the components needed by your application.
-
-- Counter.scala:
-
-  An example of a component that contains state, in this case a simple counter.
-
-- ApplicationTimer.scala:
-
-  An example of a component that starts when the application starts and stops
-  when the application stops.
-
-Filters
-=======
-
-- Filters.scala:
-
-  Creates the list of HTTP filters used by your application.
-
-- ExampleFilter.scala
-
-  A simple filter that adds a header to every response.
-
-
-
-  Things to Do
-  ============
-  install.sh
-  Grant access/permissions to read from Git on the DigitalOcean droplet.
-  Clone the repo to local directory
-  Install Scala and SBT
-  Download dependencies
-
-  start.sh
-  Compile
-  Run
-
-  tests for calling the api from the gif service
-  tests for calling the gif service from controller
-  integration test for returning 5 or 0 gifs (two tests)
