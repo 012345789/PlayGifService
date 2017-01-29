@@ -1,4 +1,5 @@
 import org.scalatestplus.play._
+import play.api.libs.json._
 import play.api.test._
 import play.api.test.Helpers._
 
@@ -37,6 +38,18 @@ class ApplicationSpec extends PlaySpec with OneAppPerTest {
       contentAsString(route(app, FakeRequest(GET, "/count")).get) mustBe "2"
     }
 
+  }
+
+  "SearchController" should {
+
+    "return no data if count is less than 5" in {
+      contentAsJson(route(app, FakeRequest(GET, "/search/sro3kdmfmgido")).get) mustBe Json.parse("""{"data": []}""")
+    }
+
+    "return data of 5 length if count is 5 or greater" in {
+      val data = ((contentAsJson(route(app, FakeRequest(GET, "/search/cats")).get) \ "data").get).asInstanceOf[JsArray].value
+      data.size mustBe 5
+    }
   }
 
 }
