@@ -10,3 +10,4 @@ If running the service on a VM with limited memory, you may see an SBT error tha
 This most likely means there was a memory leak in the VM.
 Restarting the VM will allow you to run the start script.
 
+The install.sh and start.sh scripts can be found here: https://github.com/012345789/ShellScripts
